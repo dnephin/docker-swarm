@@ -1,4 +1,4 @@
-FROM scratch
+FROM alpine:edge
 
 COPY ./swarm /swarm
 COPY ./certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
