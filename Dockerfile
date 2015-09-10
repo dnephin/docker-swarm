@@ -9,5 +9,5 @@ EXPOSE 2375
 
 VOLUME /.swarm
 
-ENTRYPOINT ["/swarm"]
-CMD ["--help"]
+ENTRYPOINT ["sh", "-c"]
+CMD ["/swarm manage --replication --advertise $(hostname -i):4000"]
