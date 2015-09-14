@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /swarm manage --replication --advertise $(hostname -i):4000
+exec /swarm manage --replication --advertise $(hostname -i):4000 $@
