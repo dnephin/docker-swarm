@@ -1,2 +1,6 @@
 #!/bin/sh
-exec /swarm manage --replication --advertise $(hostname -i):4000 $@
+set -ex
+
+exec /swarm manage \
+    --cluster-opt mesos.address=$(hostname -i) \
+    $@
